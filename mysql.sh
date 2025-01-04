@@ -40,7 +40,7 @@ VALIDATE $? "Installing MYSQL Sever"
 systemctl enable mysqld &>>$LOG_FILE_NAME
 VALIDATE $?  "Enabling Mysql server"
 
-systemctl start mysqld LOG_FILE_NAME &>>$LOG_FILE_NAME
+systemctl start mysqld &>>$LOG_FILE_NAME
 VALIDATE $? "starting mysql server"
 
 mysql -h mysql.online -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE_NAME
